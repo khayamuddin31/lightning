@@ -1,0 +1,34 @@
+<html>
+<script src="https://psldemoportal-developer-edition.ap5.force.com/lightning/lightning.out.js"></script>
+   <head>
+      <title>Property Explorer</title>
+      
+   </head>
+   
+   <body>
+      Welcome to Dreamhouse !
+     <!-- <a href="/authenticate">OAuth - Get access token</a>
+	   -->
+	   
+	   <div id="lightningDiv"</div>
+   </body>
+   
+   <script>
+   $Lightning.use("c:Day3_2ndSession_LightningOutDemoApp",function(){
+		$Lightning.createComponent("c:Day3_2ndSession_HelloWorldComp",
+		{},
+		"lightningDiv",
+		function(){});		
+		},"https://lightning-sessions-psl-dev-ed.lightning.force.com",
+		"00D7F000000rGke!AQ8AQCkj0acVNlOg70txGwAE9by9UCrqp4aJ_0Xd_VTmhmrKUkSXkyOS6KeA6b2SiLTbM4g56jVIUsy6fq3VoxpTSQYG8nOZ");
+   
+   
+   
+   
+   $Lightning.use("c:Day3_2ndSession_LightningOutDemoApp",function(){
+            $Lightning.createComponent("c:PictureGalleryCard",{},"lightningDiv",function(){});
+   },"https://psldemoportal-developer-edition.ap5.force.com/");
+		
+		
+   </script>
+</html>

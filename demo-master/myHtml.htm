@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script id="ebOneTagUrlId" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script id="ebOneTagUrlId" src="https://ltgnoutdomain-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+	</head>
+	
+	<body>
+		<div>
+			<div style="width:60%; border:2px solid #DDDDDD; margin:5% 20% auto;" id="wrapper_form">
+			Calender Here.
+			</div>
+		<div>
+		<script>
+			$(document).ready( function(){
+				$Lightning.use("c:LtgnOutApp",    // name of the Lightning app
+							function() {               // Callback once framework and app loaded
+								$Lightning.createComponent(
+									"c:LtgnOut1", // top-level component of your app
+									{ },         // attributes to set on the component when created
+									"wrapper_form",   // the DOM location to insert the component
+									function(cmp) {
+										// callback when component is created and active on the page
+									 console.log('test',cmp);
+								}
+							);
+						},
+					'https://dev1-dmgdev1-lgtout.cs43.force.com/ltgnOut'// Community endpoint
+				);
+			});
+		</script>
+	</body>
+</html>
